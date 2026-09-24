@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H1>Áreas</H1>
+    <p>Cadastrar</p>
+    <p>Lista de Áreas</p>
+    {% for area in lista_areas %}
+    <p>{{ area.id }} {{ area.nome }}</p>
+    {% empty %}
+    <p>Nenhuma área cadastrada</p>
+    {% endfor %}
+    <p><a href="{% url 'inicial' %}">Voltar</a></p>
+</body>
+</html>
