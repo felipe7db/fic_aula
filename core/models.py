@@ -1,4 +1,10 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
+
+class Usuario(AbstractUser):
+    cpf = models.CharField('CPF', max_length=11)
+    nascimento = models.DateField('Data de Nascimento')
+    REQUIRED_FIELDS = ['cpf', 'nascimento']
 
 class Area(models.Model):
     nome = models.CharField('Nome', max_length=100)
@@ -16,7 +22,8 @@ class Curso(models.Model):
     publico = models.ManyToManyField(Publico)
 
 
-'''
+'''3
+[yt?XVCCGDDDDDDDDDDDDDDDc
 Estamos trabalhando com ORM
 - Modelagem Objeto-Relacional
 - Modelar o banco de dados diretamente
