@@ -25,4 +25,5 @@ urlpatterns = [
     path('area_editar/<int:id>/', area_editar, name='area_editar'),
     path('area_remover/<int:id>/', area_remover, name='area_remover'),
     path('admin/', admin.site.urls),
+
 ]
